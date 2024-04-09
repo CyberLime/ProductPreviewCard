@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&display=swap');
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 95%;
+  max-width: 670px;
+  height: fit-content;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  background-image: url('./images/image-product-desktop.jpg');
+  background-size: contain;
+  display: block;
+  width: 50%;
+}
+
+.card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  padding: 30px 0;
+  width: 255px;
+}
+
+.card .info h2 {
+  line-height: 35px;
+}
+
+.card .category, .card p, .card #buy {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+}
+
+.card .category {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 5px;
+}
+
+.card .description {
+  line-height: 25px;
+}
+
+.card h2, .card .prices h1 {
+  font-family: 'Fraunces', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: var(--very-dark-blue);
+}
+
+.card .prices {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.card .prices * {
+  width: fit-content;
+}
+
+.card .prices h1 {
+  color: var(--dark-cyan);
+}
+
+.card .prices p {
+  text-decoration: line-through;
+}
+
+.card #buy {
+  width: 95%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--dark-cyan);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  transition: 0.15s linear;
+  cursor: pointer;
+  background-image: url('./images/icon-cart.svg');
+  background-repeat: no-repeat;
+  background-position: 50px;
+}
+
+.card #buy:hover {
+  background-color: #184030;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 10px 0;
+  }
+  
+  .card {
+    gap: 20px;
+  }
+
+  .card img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .card .info {
+    width: fit-content;
+    padding: 0 20px;
+  }
+
+  .card .info #buy {
+    align-self: center;
+  }
+}
